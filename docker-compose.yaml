@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  mfe-characters:
+    build:
+      context: .
+      args:
+        target: characters
+    image: mfe-characters
+    ports:
+      - 3001:3001
+    container_name: mfe-characters
+    networks:
+      - skynet
+  mfe-details:
+    build:
+      context: .
+      args:
+        target: details
+    image: mfe-details
+    ports:
+      - 3002:3002
+    container_name: mfe-details
+    networks:
+      - skynet
+  mfe-host:
+    build:
+      context: .
+      args:
+        target: host
+    image: mfe-host
+    ports:
+      - 3000:3000
+    container_name: mfe-host
+    networks:
+      - skynet
+
+networks:
+  skynet:
+    driver: bridge
