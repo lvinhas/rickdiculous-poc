@@ -1,0 +1,13 @@
+{
+  "name": "rickdiculous-platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --scope @rickdiculous-platform/*",
+    "start": "lerna run --scope @rickdiculous-platform/* --parallel start"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
